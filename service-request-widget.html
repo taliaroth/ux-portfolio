@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Widget - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="project-header-content">
+            <h1>Service Request Widget</h1>
+            <div class="tags">
+                <span class="tag">Ideation</span>
+                <span class="tag">Design</span>
+                <span class="tag">Responsive</span>
+            </div>
+            <p>A widget government agencies can embed in their websites for citizens to submit service requests.</p>
+        </div>
+        <div class="project-header-image">
+            <img src="images/service-request-widget/final-design-desktop.jpg" alt="Service request widget interface">
+        </div>
+    </section>
+
+    <div class="project-content">
+        <!-- Overview Section -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>I led the UX redesign of OneView's government service request widget, creating a flexible system that empowers agencies to customize request workflows while maintaining a cohesive, modern interface that seamlessly integrates with diverse government websites.</p>
+            
+            <div class="two-columns">
+                <div>
+                    <h3>My Role</h3>
+                    <p>Lead UX Designer</p>
+                    
+                    <h3>Timeline</h3>
+                    <p>3 months (March 2023 - May 2023)</p>
+                </div>
+                <div>
+                    <h3>Tools Used</h3>
+                    <p>Figma, Miro</p>
+                    
+                    <h3>Deliverables</h3>
+                    <p>user flows, wireframes, hi-fi mockups, interactive prototypes, design specifications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>The challenge was to transform an outdated, confusing interface with misleading progress indicators and inefficient use of space into an intuitive, user-centered experience that clearly communicates expectations and prioritizes the core request submission functionality that citizens need.</p>
+            
+            <h3>Key Issues</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Outdated UI Design</h4>
+                    </div>
+                    <p>The existing widget had a visually outdated interface that needed modernization to improve user experience and reflect current design standards</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Confusing Progress Indicators</h4>
+                    </div>
+                    <p>The step counter changed unpredictably after users selected a request type, creating user confusion about the process length and expectations</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Inefficient Space Utilization</h4>
+                    </div>
+                    <p>Optional account creation/sign-in features consumed excessive real estate despite offering limited immediate value to users</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Embedded Widget Constraints</h4>
+                    </div>
+                    <p>Working within the limitations of an embeddable component that needs to function seamlessly within third-party government websites</p>
+                </div>
+             
+            </div>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/existing-user-journey.png" alt="Wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/existing-design.png" alt="Wireframe 1">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">User journey and existing widget</div>
+            </div>
+
+
+        <!-- Initial Ideation Section -->
+        <section class="project-section">
+            <h2>Initial Ideation</h2>
+            <p>Tthe stakeholders were confident in the need for this update, I used my experience and knowledge of usability heuristics to make design decisions.</p>
+            
+            <h3>Gathering Requirements</h3>
+            <p>I started by working with the product manager and developers to understand what was required in this project and what the technical constraints were.</p>
+            
+           <!-- <div class="image-container">
+                <img src="images/service-request-widget/requirement-list.png" alt="framing the space">
+                <div class="image-caption">List of requirements</div>
+            </div> -->
+            
+            <h3>Wireframing</h3>
+            <p>Once we had our requirements laid out, I created wireframes to give the stakeholders an idea of how the widget could look with a new layout and step counter.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/wireframe-1.jpg" alt="Wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/wireframe-2.jpg" alt="Wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/wireframe-3.jpg" alt="Wireframe 3">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Wireframes of the widget home page and step counter</div>
+            </div>
+
+
+        <!-- Design Process Section -->
+        <section class="project-section">
+            <h2>Design Process</h2>
+            <p>After reviewing the wireframes with the stakeholder, we decided to create multi-page form that displays the number of steps after a request type is selected.</p>
+            
+            <h3>Visual Design</h3>
+            <p>Since another product in the company was utilizing Material 3, and OneView didn't have an established design system, we decided to continue with that styling for the widget. I also wanted to maintain a neutral styling for the widget so it could fit seamlessly into a variety of websites. Since our customers are all from government agencies, I did some research on common UI styling in that industry.</p>
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/final-design-desktop.jpg" alt="final design for desktop">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/final-design-tablet.jpg" alt="final design for tablet">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/service-request-widget/final-design-iphone.jpg" alt="final design for iPhone">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Final designs for web, tablet, and mobile</div>
+            </div>
+
+            
+            <h3>Prototype</h3>
+            <p>I created an interactive prototype to give the developers a visual of the flow of the pages. What's not included in this prototype are the interactive states because the component library we were using already had them defined.</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="images/service-request-widget/interactive-prototype.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">Prototype demonstration video</div>
+            </div>
+
+            <h3>Handoff</h3>
+            <p>In addition to the prototype, I also documented the designs and their specs for the developers I was working with.</p>
+            <div class="image-container">
+                <img src="images/service-request-widget/handoff-documentation.png" alt="handoff documentation">
+                <div class="image-caption">Figma file with the documentation for the design handoff</div>
+            </div>
+
+        </section>
+        
+        <!-- Solution Section -->
+        <section class="project-section">
+            <h2>Solution: Modernized Citizen-Centric Request Interface</h2>
+            <p>I redesigned OneView's service request widget with a streamlined multi-page approach that guides citizens through a logical, predictable submission process. By restructuring the information architecture and modernizing the UI, I created a more intuitive experience that prioritizes the core task of submitting requests while accommodating the diverse needs of government agencies and their constituents.</p>
+            
+            <h3>Key Features</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">✓</div>
+                        <h4>Progressive Disclosure</h4>
+                    </div>
+                    <p>Transformed a cluttered single-page form into a focused multi-step process, reducing cognitive load and allowing users to concentrate on one decision at a time</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">✓</div>
+                        <h4>Optimized Information Hierarchy</h4>
+                    </div>
+                    <p>Prioritized essential request information while repositioning optional account creation to a subtle but accessible location in the top-right corne.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">✓</div>
+                        <h4>Enhanced Request Selection</h4>
+                    </div>
+                    <p>Created a searchable, well-organized list of service categories with clear visual hierarchy, making it easier for citizens to find and select the appropriate request type</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">✓</div>
+                        <h4>Responsive Layout</h4>
+                    </div>
+                    <p>Designed the interface to function seamlessly across desktop and mobile devices, ensuring accessibility for all citizens regardless of how they access government services</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">✓</div>
+                        <h4>Customizable Design System</h4>
+                    </div>
+                    <p>Developed a clean, professional aesthetic that integrates well with various government websites while supporting agency-specific customization options</p>
+                </div>
+            </div>
+            
+
+        
+
+            <h2>Reflection</h2>
+            <p>This project challenged me to quickly adapt to a new product environment with established requirements and tight timelines, ultimately demonstrating my ability to collaborate effectively with stakeholders while advocating for improved user experiences despite constraints.</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="challenges">Challenges</button>
+                    <button class="tab-button" data-tab="learnings">Learnings</button>
+                    <button class="tab-button" data-tab="next-steps">Next Steps</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="challenges">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Rapid Onboarding</h4>
+                                <p>Joining the project midstream required quickly understanding both the product ecosystem and specific widget requirements.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Limited Research</h4>
+                                <p>Without time for dedicated user research, I needed to effectively extract insights from stakeholders and existing knowledge.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Balancing Priorities</h4>
+                                <p>Navigating between technical constraints, agency customization needs, and end-user experience required thoughtful prioritization.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>No Design System</h4>
+                                <p>Working without pre-defined design guidelines meant creating solutions that would integrate with both the parent product and various websites.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Fixed Requirements</h4>
+                                <p>Many functional requirements were set before my involvement, limiting opportunities for fundamental rethinking of certain aspects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="learnings">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Stakeholder Collaboration</h4>
+                                <p>Developed stronger skills in extracting user-centered insights from product managers and developers when direct user research isn't possible.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Advocacy Within Constraints</h4>
+                                <p>Learned to effectively advocate for UX improvements even within established requirement frameworks.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Adaptable Design Thinking</h4>
+                                <p>Enhanced my ability to create flexible design solutions that accommodate various implementation contexts.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Balancing Customization</h4>
+                                <p>Gained experience creating designs that support customization while ensuring the default state provides an excellent experience.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Cross-Functional Communication</h4>
+                                <p>Improved my ability to translate between design concepts and technical requirements when working closely with development teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="next-steps">
+                        <p>Based on user feedback, the team is now exploring enhanced features for the widget including:</p>
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>View Nearby Requests</h4>
+                                <p>Allow users to see other service requests in their vicinity to reduce duplicate submissions and provide context.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Request Management</h4>
+                                <p>Enable users to view and manage their existing requests when signed in to streamline their experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div> 
+    
+    <!-- Next Project Navigation -->
+    <section class="next-project">
+        <h3>Continue exploring my work</h3>
+        <div class="navigation-buttons">
+            <a href="govqa-request-forum.html" class="btn btn-secondary">←<span class="hidden"> PREVIOUS</span></a>
+            <a href="index.html#work" class="btn btn-secondary">ALL PROJECTS</a>
+            <a href="color-theming.html" class="btn btn-secondary"><span class="hidden">NEXT </span>→</a>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

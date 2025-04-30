@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talia Roth - UX Designer Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#work">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#work" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>TALIA ROTH</h1>
+        <p>I'm a designer who's passionate about creating user-centered experiences through data-driven research</p>
+        <a href="#work" class="btn">VIEW MY WORK</a>
+        <div class="photo-credit">Photo taken by Talia Roth in NYC</div>
+    </section>
+
+    <section class="projects" id="work">
+        <p class="projects-intro">Click to read more about the projects I've worked on.</p>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <a href="govqa-request-forum.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-image">
+                        <img src="images/govqa-request-forum/final-design-softLight.jpg" alt="Request forum preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Request Forum</h3>
+                        <p>A messaging feature to enhance collaboration in a record request software</p>
+                        <div class="tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Ideation</span>
+                            <span class="tag">Design</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <a href="service-request-widget.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-image">
+                        <img src="images/service-request-widget/final-design-desktop.jpg" alt="Service request widget preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Service Request Widget</h3>
+                        <p>A widget for citizens to submit service requests to their government</p>
+                        <div class="tags">
+                            <span class="tag">Ideation</span>
+                            <span class="tag">Design</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <a href="color-theming.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-image">
+                        <img src="images/color-theming/banner.jpg" alt="Color theming preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Color Theming</h3>
+                        <p>Configurable color themes based on user research</p>
+                        <div class="tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Ideation</span>
+                            <span class="tag">Accessibility</span>
+                            <span class="tag">Design Systems</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card">
+                <a href="smart-summary.html" style="text-decoration: none; color: inherit;">
+                    <div class="project-image">
+                        <img src="images/smart-summary/banner.jpg" alt="Smart summary preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Smart Summary</h3>
+                        <p>Research and ideation for an AI generated summary of record requests </p>
+                        <div class="tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Ideation</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Add other project cards -->
+            <!-- ... -->
+        </div>
+    </section>
+
+    <!-- Import JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

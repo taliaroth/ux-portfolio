@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-page">
+        <div class="contact-page-container">
+            <div class="contact-page-header">
+                <h1>LET'S CONNECT</h1>
+                <p>I'm currently open to new opportunities, collaborations, and conversations about UX design. Feel free to reach out through any of the methods below.</p>
+            </div>
+            
+            <div class="contact-options">
+                <div class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>For project inquiries or professional opportunities:</p>
+                    <a href="mailto:taliarothny@gmail.com">Email me</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">🔗</div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally and view my experience:</p>
+                    <a href="https://www.linkedin.com/in/talia-roth-a4b95616a/" target="_blank">linkedin.com/in/talia-roth-a4b95616/a</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">💻</div>
+                    <h3>Github</h3>
+                    <p>Explore my code repositories and projects:</p>
+                    <a href="https://github.com/taliaroth" target="_blank">github.com/taliaroth</a>
+                </div>
+            </div>
+            
+            <div class="connect-cta">
+                <h3>Looking to hire a UX designer?</h3>
+                <p>Download my resume to learn more about my experience and skills.</p>
+                <a href="resume.pdf" class="btn btn-primary" target="_blank">DOWNLOAD RESUME</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

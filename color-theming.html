@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theming - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="project-header-content">
+            <h1>Color Theming</h1>
+            <div class="tags">
+                <span class="tag">Research</span>
+                <span class="tag">Ideation</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Design Systems</span>
+            </div>
+            <p>An internal messaging feature designed to enhance collaboration between team members working in a government records request software, improving communication and efficiency.</p>
+        </div>
+        <div class="project-header-image">
+            <img src="images/color-theming/banner.jpg" alt="Color themes">
+        </div>
+    </section>
+
+    <div class="project-content">
+        <!-- Overview Section -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>I led a UX initiative to address user feedback about GovQA's excessively bright interface by designing and implementing configurable color themes in the Material 3 framework, ultimately creating three options—the updated original theme, a soft light mode, and a deep navy dark mode—allowing users to customize their experience based on personal preference and accessibility needs.</p>
+            
+            <div class="two-columns">
+                <div>
+                    <h3>My Role</h3>
+                    <p>Lead UX Designer</p>
+                    
+                    <h3>Timeline</h3>
+                    <p>2 months (March 2023 - April 2023)</p>
+                </div>
+                <div>
+                    <h3>Tools Used</h3>
+                    <p>Figma, Miro, Pendo</p>
+                    
+                    <h3>Deliverables</h3>
+                    <p>Research findings, grayscale wireframing, hi-fi mockups, design specifications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>GovQA's product interface was consistently described by users as "too white and bright," causing visual discomfort during extended use. As the product underwent a framework rebuild, there was an opportunity to address this user pain point by implementing color themes within the Material 3 framework, but the challenge required balancing immediate improvements with technical constraints while ensuring accessibility and user satisfaction.</p>
+            
+            <h3>Key Issues</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Technical Constraints Management</h4>
+                    </div>
+                    <p>Determining which parts of the product could adopt new color themes immediately versus which parts needed to wait for the framework updates</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Strategic Implementation Planning</h4>
+                    </div>
+                    <p>Creating a logical approach for applying themes to specific UI elements that would provide meaningful improvement while the product was in transition</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>User Preference Validation</h4>
+                    </div>
+                    <p>Challenging assumptions about what users actually wanted (dark mode vs. low-contrast light mode) through targeted research</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Accessibility Balance</h4>
+                    </div>
+                    <p>Ensuring all proposed themes maintained readability while addressing the brightness concerns</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Design System Integration</h4>
+                    </div>
+                    <p>Adapting the new color themes to work within the existing design system framework while leveraging Material 3 color theming principles</p>
+                </div>
+             
+            </div>
+
+        </section>
+
+        <!-- Initial Ideation Section -->
+        <section class="project-section">
+            <h2>Initial Ideation</h2>
+            <p>In the initial ideation phase, I employed grayscale component mapping to strategically identify where color themes would have the most impact while working within the technical constraints of GovQA's partial framework migration. This approach allowed me to focus on structural decisions before committing to specific color palettes, initially hypothesizing that users wanted lower contrast colors rather than darkness.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/original-color-themes.jpg" alt="exitsing color theme">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/greyscale-page1.jpg" alt="Greyscale wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/greyscale-page2.jpg" alt="Greyscale wireframe 2">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">The existing color theme (1) and greyscale wireframes (2-3)</div>
+            </div>
+
+        <!-- Research Section -->
+        <section class="project-section">
+            <h2>Research</h2>
+            <p>After initial ideation revealed conflicting assumptions about user preferences for color themes, I conducted targeted user research to validate which approach would best address the "too bright" feedback while maintaining usability and accessibility.</p>
+            
+            <h3>Research Goals</h3>
+            <ul>
+                <li>Determine whether users preferred a dark theme or a low-contrast light theme</li>
+                <li>Understand users' reasoning behind their preferences</li>
+                <li>Identify potential concerns with either approach</li>
+                <li>Gather insights to inform the final design direction</li>
+            </ul>
+            
+            <h3>Methodology</h3>
+            <ul>
+                <li>In-product survey through Pendo targeting active users</li>
+                <li>Visual A/B comparison between dark theme and low-contrast light theme options</li>
+                <li>Open-ended questions about preferences and potential concerns</li>
+                <li>Collected over 300 responses for statistical significance</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="images/color-theming/affinity-diagram.jpg" alt="Affinity diagram">
+                <div class="image-caption">Affinity diagram organizing key research findings</div>
+            </div>
+            
+            <h3>Key Insights</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Split Preference</h4>
+                    </div>
+                    <p>User preference was nearly evenly divided between dark and light themes</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Readability Concerns</h4>
+                    </div>
+                    <p>Users reported opposite experiences with readability across both options</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Extended Use Benefit</h4>
+                    </div>
+                    <p>Dark mode was preferred for longer sessions to reduce eye strain</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Mood Impact</h4>
+                    </div>
+                    <p>Some users found the dark theme "depressing" while others found it soothing</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Contextual Needs</h4>
+                    </div>
+                    <p>Users expressed different preferences based on work environment and individual needs</p>
+                </div>
+
+            </div>
+
+            <div class="results">
+                <h3>Research Impact</h3>
+                <p>The research revealed that no single solution would satisfy all users, leading directly to our decision to implement configurable themes that give users control over their experience. This user-centered approach transformed a potential design impasse into an opportunity to enhance personalization and accessibility.</p>
+            </div>
+        </section>
+
+        <!-- Design Process Section -->
+        <section class="project-section">
+            <h2>Design Process</h2>
+            <p>Following the research findings, I developed a multi-themed approach that would accommodate our diverse user preferences while working within technical constraints. I created moodboards to explore color palettes that would both resolve the brightness issue and integrate well with the existing framework's colors on pages that couldn't yet be updated. This thoughtful integration was crucial to ensure visual consistency across the product during its transition period.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/moodboard-1.jpg" alt="Moodboar 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/moodboard-2.jpg" alt="Moodboard 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/moodboard-3.jpg" alt="Moodboard 3">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Examples of some mood boards I created</div>
+            </div>
+            
+            <p>Working with Material 3's color theming capabilities, I refined three distinct themes: an updated version of the original design system colors, a soft light theme with reduced contrast, and a deep navy dark theme. Each palette was carefully evaluated for accessibility standards and tested within the interface to ensure it maintained readability while addressing the brightness concerns raised by users.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/soft-light-theme.jpg" alt="soft light theme">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/deep-navy-theme.jpg" alt="deep navy theme">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/bright-theme.jpg" alt="bright thene">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Documented color themes</div>
+            </div>
+        
+        <!-- Solution Section -->
+        <section class="project-section">
+            <h2>Solution: Personalized Experience Through Configurable Themes</h2>
+            <p>We implemented three configurable color themes—updated original, "Soft Light," and "Deep Navy"—that strategically applied to key interface elements while maintaining compatibility with legacy sections, successfully addressing brightness concerns with high user adoption rates.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>User Control:</strong> User-controlled theme selector integrated into the product</li>
+                <li><strong>Multiple Theme Options:</strong> Three distinct theme options catering to different user preferences</li>
+                <li><strong>Material 3 Integration:</strong> Material 3 color system implementation for consistent theming</li>
+                <li><strong>Strategic Application:</strong> Strategic application of themes to high-impact interface areas</li>
+                <li><strong>Visual Cohesion:</strong> Seamless visual integration with legacy framework sections</li>
+                <li><strong>Accessibility Compliance:</strong> Accessibility-compliant color contrast across all themes</li>
+            </ul>
+
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/soft-light-mockup.jpg" alt="soft light mockup">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/deep-navy-mockup.jpg" alt="deep navy mockup">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/color-theming/original-color-themes.jpg" alt="bright mockup">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Color themes in the product</div>
+            </div>
+        
+        <!-- Results Section -->
+         <!--
+        <section class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="results">
+                 <h3>Outcomes</h3>
+                <p>The internal chat feature will be implemented and rolled out to GovQA customers.</p>
+                
+               <h3>Key Metrics</h3>
+                <ul>
+                    <li><strong>Efficiency Improvement:</strong> 43% reduction in time spent switching between communication tools</li>
+                    <li><strong>Adoption Rate:</strong> 78% of users actively using the chat feature within the first month</li>
+                    <li><strong>User Satisfaction:</strong> 92% of surveyed users reported that the chat feature improved their workflow</li>
+                    <li><strong>Training Impact:</strong> 35% reduction in onboarding time for new staff members due to better preserved context</li>
+                </ul>
+                
+                <h3>User Feedback</h3>
+                <p>"This has completely transformed how our team collaborates on requests. Having all our communications in one place has saved us countless hours and improved our response quality." - Records Manager, City of Portland</p>
+            </div>
+        </section> -->
+        
+        <!-- Reflection Section -->
+        <section class="project-section">
+            <h2>Reflection</h2>
+            <p>The GovQA color theming project successfully balanced diverse user needs with technical constraints, resulting in a configurable solution that addressed brightness concerns while maintaining visual cohesion across the evolving product.</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="challenges">Challenges</button>
+                    <button class="tab-button" data-tab="learnings">Learnings</button>
+                    <button class="tab-button" data-tab="next-steps">Next Steps</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="challenges">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Technical Fragmentation</h4>
+                                <p>Navigating a partially updated codebase required strategic decisions about where themes could be applied</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Assumption Validation</h4>
+                                <p>Initial design direction based on untested assumptions needed recalibration after research</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Balancing Act</h4>
+                                <p>Creating themes that addressed brightness concerns while maintaining readability and accessibility standards</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Visual Cohesion</h4>
+                                <p>Ensuring new themes harmonized with legacy sections that couldn't yet be updated</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="learnings">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Research Value</h4>
+                                <p>User research prevented potentially costly design decisions based on incorrect assumptions</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Grayscale First</h4>
+                                <p>Starting with grayscale mapping provided clarity on structural impact before color selection</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Preference Diversity</h4>
+                                <p>User preferences are rarely uniform, and flexibility can create a better solutions</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Integration Strategy</h4>
+                                <p>Thoughtful implementation planning allowed for meaningful improvements despite technical limitations</p>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="next-steps">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Comprehensive Implementation</h4>
+                                <p>Continue building the remaining product components using the new themes</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>User Feedback Collection</h4>
+                                <p>Gather focused feedback on the implemented themes to guide refinements</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Accessibility Enhancement</h4>
+                                <p>Further optimize each theme for specific accessibility needs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+    </div> 
+    
+    <!-- Next Project Navigation -->
+    <section class="next-project">
+        <h3>Continue exploring my work</h3>
+        <div class="navigation-buttons">
+            <a href="service-request-widget.html" class="btn btn-secondary">←<span class=hidden> PREVIOUS</span></a>
+            <a href="index.html#work" class="btn btn-secondary">ALL PROJECTS</a>
+            <a href="smart-summary.html" class="btn btn-secondary"><span class=hidden>NEXT </span>→</a>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

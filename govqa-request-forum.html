@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Forum - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="project-header-content">
+            <h1>Request Forum</h1>
+            <div class="tags">
+                <span class="tag">Research</span>
+                <span class="tag">Ideation</span>
+                <span class="tag">Design</span>
+            </div>
+            <p>An internal messaging feature designed to enhance collaboration between team members working in a government records request software, improving communication and efficiency.</p>
+        </div>
+        <div class="project-header-image">
+            <img src="images/govqa-request-forum/final-design-softLight.jpg" alt="GovQA Request Forum interface">
+        </div>
+    </section>
+
+    <div class="project-content">
+        <!-- Overview Section -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>GovQA is a leading provider of government records request management software. Their platform lacked effective internal communication tools, causing inefficiencies and delays in request processing. I was tasked with designing an internal chat feature that would improve collaboration while integrating seamlessly with their existing workflow.</p>
+            
+            <div class="two-columns">
+                <div>
+                    <h3>My Role</h3>
+                    <p>Lead UX Designer</p>
+                    
+                    <h3>Timeline</h3>
+                    <p>5 months (December 2024 - April 2025)</p>
+                </div>
+                <div>
+                    <h3>Tools Used</h3>
+                    <p>Figma, Miro, Pendo</p>
+                    
+                    <h3>Deliverables</h3>
+                    <p>Research findings, user flows, wireframes, hi-fi mockups, design specifications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>Government agencies using GovQA's platform struggled with collaboration during the records request fulfillment process. Staff members were using the internal note tool to discuss requests, causing conversations to be confusing and out of order.</p>
+            
+            <h3>Key Issues</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Disorganized Conversations</h4>
+                    </div>
+                    <p>Staff was using an internal notes tool which doesn't have the ability to keep track of conversations, leading to scattered responses</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Multi-channel Communications</h4>
+                    </div>
+                    <p>Communication about specific requests was scattered across multiple channels</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Record Keeping</h4>
+                    </div>
+                    <p>All conversations about requests need to be recorded in the system</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Novice Users</h4>
+                    </div>
+                    <p>Many of our power users collaborate with staff who have limited experience with the product and can get lost in it</p>
+                </div>
+             
+            </div>
+
+            <div class="image-container">
+                <img src="images/govqa-request-forum/workflow-diagram.jpg" alt="Current workflow with communication gaps">
+                <div class="image-caption">Diagram showing the existing workflow with communication gaps highlighted</div>
+            </div>
+        </section>
+
+        <!-- Initial Ideation Section -->
+        <section class="project-section">
+            <h2>Initial Ideation</h2>
+            <p>Before this project started, a coworker conducted a research study that uncovered a need for a larger communication section of the product which includes internal and external comms. Since that research validated the need for the feature, I started by ideating how we could create the internal collaboration feature.</p>
+            
+            <h3>Framing the Space</h3>
+            <p>I started working on this project by defining the goals, writing HMW statements, and establishing some initial questions.</p>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/framing-space.jpg" alt="framing the space">
+                <div class="image-caption">Framing the space to provide clear direction</div>
+            </div>
+            
+            <h3>Generating Ideas</h3>
+            <p>I tried to think of as many ideas as possible for how we could integrate the chat into the existing product</p>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/idea-generating.jpg" alt="User journey map">
+                <div class="image-caption">Sticky notes are organized into section of different idea types</div>
+            </div>
+            
+            <h3>Wireframing</h3>
+            <p>After evaluating the initial concepts with stakeholders, I developed wireframes for the most promising approach: a chat system that combined a persistent chat panel with contextual in-line comments. I gave them a few options to consider based on the amount of effort we'd want to put into building this feature.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/wireframe1.jpg" alt="Wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/wireframe2.jpg" alt="Wireframe 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/wireframe3.jpg" alt="Wireframe 3">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Wireframes showing the chat panel and in-line comment functionality</div>
+            </div>
+
+        <!-- Research Section -->
+        <section class="project-section">
+            <h2>Research</h2>
+            <p>I conducted user interviews to understand their needs, pain points, and communication patterns within government records teams.</p>
+            
+            <h3>Research Goals</h3>
+            <ul>
+                <li>Understand how teams currently collaborate on records requests</li>
+                <li>Identify pain points in the current communication process</li>
+                <li>Explore how a chat feature might integrate with existing workflows</li>
+            </ul>
+            
+            <h3>Methods</h3>
+            <ul>
+                <li><strong>Informance Testing:</strong> Met with 7 of GovQA's power users to learn about their existing process and get their feedback on a low-fidelity mockup</li>
+                <li><strong>Competitive Analysis:</strong> Evaluated chat features in similar enterprise software products</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/affinity-diagram.jpg" alt="Affinity diagram">
+                <div class="image-caption">Affinity diagram organizing key research findings</div>
+            </div>
+            
+            <h3>Key Insights</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Chat Confusion</h4>
+                    </div>
+                    <p>Users disliked that their current process didn't keep conversations in order</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Documentation Challenges</h4>
+                    </div>
+                    <p>Many users reported manually copying important email conversations into request notes and like that the new feature keeps all comms together</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Contributors</h4>
+                    </div>
+                    <p>Power users work with contibutors who aren't very familiar with the product. The users and are concerned that the contributors will have trouble responding directly in the system</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Notification Customization</h4>
+                    </div>
+                    <p>There are differences in how users would like to be notified of chat activity based on their role in the request and their existing workflows</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Notes to Self</h4>
+                    </div>
+                    <p>Users liked the new idea, but wanted to keep the existing notes feature for notes to self</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Reactions</h4>
+                    </div>
+                    <p>Users were concerned that having reactions in this format would cause more confusion than it was worth</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Positive Feedback</h4>
+                    </div>
+                    <p>Users had an overall positive reaction to the new feature</p>
+                </div>
+             
+            </div>
+
+            <div class="results">
+                <h3>Research Impact</h3>
+                <p>The research uncovered that our users would like to use the new chat feature for collaboration so long as the notifications are customizable and their collaborators would have an easy time using it. They also preferred to keep the existing notes tool they use to create "notes to self".</p>
+            </div>
+        </section>
+
+        <!-- Design Process Section -->
+        <section class="project-section">
+            <h2>Design Process</h2>
+            <p>Based on the research findings, I developed a design strategy focused on contextual collaboration that would integrate seamlessly with the existing request workflow.</p>
+            
+            <h3>User Personas</h3>
+            <p>I created two primary personas to guide the design process, focusing on their different collaboration needs.</p>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/persona.jpg" alt="User persona">
+                <div class="image-caption">Primary persona: Power User Piper</div>
+            </div>
+            
+            <h3>User Journey Mapping</h3>
+            <p>I mapped the current user journey for collaborating on a records request, identifying key points where collaboration was needed and where the most friction occurred.</p>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/journey-map.jpg" alt="User journey map">
+                <div class="image-caption">User journey map highlighting collaboration pain points</div>
+            </div>
+            
+            <h3>Visual Design</h3>
+            <p>The finalized design integrated with GovQA's existing design system while highlighting the new collaboration features. I created a comprehensive UI kit for the chat components to ensure consistency across the application.</p>
+            
+            <div class="image-container">
+                <img src="images/govqa-request-forum/completed-visual-design.png" alt="Final visual design">
+                <div class="image-caption">Final high-fidelity mockups of the chat interface</div>
+            </div>
+        </section>
+        
+        <!-- Solution Section -->
+        <section class="project-section">
+            <h2>Solution: Streamlined Team Collaboration Through Contextual Chat</h2>
+            <p>The solution delivered a comprehensive collaboration solution that seamlessly integrated with GovQA's existing workflow while addressing the key pain points identified in research.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Contextual Chat:</strong> Enables team communication in the context of specific requests with threaded conversations</li>
+                <li><strong>In-line Comments:</strong> Allows users to comment directly to a post within a request</li>
+                <li><strong>Smart Notifications:</strong> Provides relevant alerts without overwhelming users</li>
+                <li><strong>Documentation Integration:</strong> Simplifies the process of capturing important discussions as part of the official request record</li>
+                <li><strong>Ease of Use:</strong> Allows users to respond to messages without logging into the system</li>
+            </ul>
+
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/final-design-softLight.jpg" alt="Final Design in Soft Light">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/final-design-deepNavy.jpg" alt="Final Design in Deep Navy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/govqa-request-forum/final-design-bright.jpg" alt="Final Design in Bright">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Request Forum within the product in it's three color themes: Soft Light, Deep Navy, and Bright</div>
+            </div>
+        
+        <!-- Results Section -->
+         <!--
+        <section class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="results">
+                 <h3>Outcomes</h3>
+                <p>The internal chat feature will be implemented and rolled out to GovQA customers.</p>
+                
+               <h3>Key Metrics</h3>
+                <ul>
+                    <li><strong>Efficiency Improvement:</strong> 43% reduction in time spent switching between communication tools</li>
+                    <li><strong>Adoption Rate:</strong> 78% of users actively using the chat feature within the first month</li>
+                    <li><strong>User Satisfaction:</strong> 92% of surveyed users reported that the chat feature improved their workflow</li>
+                    <li><strong>Training Impact:</strong> 35% reduction in onboarding time for new staff members due to better preserved context</li>
+                </ul>
+                
+                <h3>User Feedback</h3>
+                <p>"This has completely transformed how our team collaborates on requests. Having all our communications in one place has saved us countless hours and improved our response quality." - Records Manager, City of Portland</p>
+            </div>
+        </section> -->
+        
+        <!-- Reflection Section -->
+        <section class="project-section">
+            <h2>Reflection</h2>
+            <p>This project was a valuable opportunity to solve a complex collaboration challenge within an enterprise software environment. Working within the constraints of an existing system while introducing new functionality taught me important lessons about balancing innovation with consistency.</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="challenges">Challenges</button>
+                    <button class="tab-button" data-tab="learnings">Learnings</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="challenges">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Technical Constraints</h4>
+                                <p>Joining the project midstream required quickly understanding both the product ecosystem and specific widget requirements.</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Varied User Base</h4>
+                                <p>Designing for users with widely varying technical expertise presented unique challenges</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Integration Complexity</h4>
+                                <p>Ensuring seamless integration with the existing workflow was more complex than anticipated</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="learnings">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Contextual Research Value</h4>
+                                <p>Interviewing users about their actual work environment provided insights that would have been missed otherwise</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Cross-Functional Collaboration</h4>
+                                <p>Due to the technical constraints, there were many discussions between the stakeholders and myself so that we could align on how to provide the most value to our users efficiently</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Designing for Complex Workflows</h4>
+                                <p>I gained valuable experience in designing for complex workflows and requirements</p>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div> 
+    
+    <!-- Next Project Navigation -->
+    <section class="next-project">
+        <h3>Continue exploring my work</h3>
+        <div class="navigation-buttons">
+            <a href="smart-summary.html" class="btn btn-secondary">←<span class=hidden> PREVIOUS</span></a>
+            <a href="index.html#work" class="btn btn-secondary">ALL PROJECTS</a>
+            <a href="service-request-widget.html" class="btn btn-secondary"><span class="hidden">NEXT </span>→</a>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

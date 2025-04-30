@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Summary - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">MY WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="project-header-content">
+            <h1>AI Smart Summary</h1>
+            <div class="tags">
+                <span class="tag">Research</span>
+                <span class="tag">Ideation</span>
+            </div>
+            <p>An internal messaging feature designed to enhance collaboration between team members working in a government records request software, improving communication and efficiency.</p>
+        </div>
+        <div class="project-header-image">
+            <img src="images/smart-summary/banner-alt.jpg" alt="smart summary">
+        </div>
+    </section>
+
+    <div class="project-content">
+        <!-- Overview Section -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>This project explored the integration of AI technology to improve record request processing for government agencies. Through a mixed-methods research approach combining in-depth user interviews and large-scale feedback collection, we validated that AI-generated request summaries would significantly enhance workflow efficiency for agency staff. The research not only confirmed strong user interest with over 66% of surveyed users rating the AI summaries highly, but also provided critical insights into implementation considerations, allowing for informed decision-making about feature placement, permissions, and display options as we move toward implementation.</p>
+            
+            <div class="two-columns">
+                <div>
+                    <h3>My Role</h3>
+                    <p>Lead UX Researcher</p>
+                    
+                    <h3>Timeline</h3>
+                    <p>3 months (March 2024 - May 2024)</p>
+                </div>
+                <div>
+                    <h3>Tools Used</h3>
+                    <p>Miro, Pendo</p>
+                    
+                    <h3>Deliverables</h3>
+                    <p>Research findings, AI prompts</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>Government agencies process numerous record requests daily, requiring staff to manually review and extract key information from often lengthy and unstructured request descriptions. This manual process is time-consuming, prone to inconsistency, and creates bottlenecks in request processing workflows.</p>
+            
+            <h3>Key Issues</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Information Overload</h4>
+                    </div>
+                    <p>Staff must sift through verbose request descriptions to identify critical details, often spending excessive time on initial request assessment</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Decision-Making Delays</h4>
+                    </div>
+                    <p>The lack of quick access to essential request components slows down initial routing and assignment decisions, extending overall fulfillment timelines</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Information Gaps</h4>
+                    </div>
+                    <p>Requestors frequently omit crucial details (such as relevant date ranges or specific departments), forcing staff to rely on institutional memory or follow up for clarification, which an AI summary could help identify quickly</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Section -->
+        <section class="project-section">
+            <h2>Research</h2>
+            <p>To evaluate the potential value of AI-generated summaries for record request processing, I conducted a two-phase research study combining qualitative interviews with quantitative validation to understand user needs and reactions to the proposed feature.</p>
+            
+            <h3>Research Goals</h3>
+            <ul>
+                <li>Confirm whether users want an AI request summary</li>
+                <li>Learn what type of information the AI request summary should provide</li>
+                <li>Determine how the AI request summary would improve their workflow</li>
+            </ul>
+            
+            <h3>Method 1: Personal Inventory Interviews</h3>
+            <ul>
+                <li><strong>Participant Profile:</strong> Engaged with 6 power users who regularly assign, fill, and manage record requests</li>
+                <li><strong>Research Format:</strong> One-on-one sessions where participants shared representative request examples and highlighted critical information</li>
+                <li><strong>Information Gathering:</strong> Users demonstrated their workflow and identified key elements they look for when processing requests</li>
+                <li><strong>Request Analysis:</strong> Observed patterns in what information users prioritize and how they extract meaning from unstructured request text</li>
+            </ul>
+
+            <h3>Method 2: AI Summary Evaluation Survey</h3>
+            <ul>
+                <li><strong>Development Process:</strong> Created AI-generated summaries based on insights from interviews</li>
+                <li><strong>Testing Approach:</strong> Designed a mock record request with corresponding AI summary for evaluation</li>
+                <li><strong>Scale:</strong> Collected 150 responses from active product users</li>
+                <li><strong>Measurement:</strong> Used a 5-point rating scale and asked about likelihood of use</li>
+                <li><strong>Feedback Collection:</strong> Gathered qualitative responses about benefits and concerns</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="images/smart-summary/affinity-diagram.jpg" alt="Affinity diagram">
+                <div class="image-caption">Affinity diagram organizing key research findings</div>
+            </div>
+            
+            <h3>Key Insights</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Critical Information Elements</h4>
+                    </div>
+                    <p>Users consistently prioritize specific information types when processing requests, including date/time parameters, fulfillment possibility, appropriate department/assignee, "any and all" language, location details, and report numbers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Strong User Interest</h4>
+                    </div>
+                    <p>104/150 respondents indicated they would use the AI summary feature, with 100 rating it 4+ on a 5-point scale.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Workflow Enhancement</h4>
+                    </div>
+                    <p>Users found the summary easy to read, appreciated its ability to reduce workload, valued it as a starting point, and noted it helped clarify next steps and internal processing.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Usage Concerns</h4>
+                    </div>
+                    <p>Some users expressed hesitation about relying solely on AI summaries, with specific concerns about potential liability if important information were omitted or misrepresented.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <h4>Implementation Considerations</h4>
+                    </div>
+                    <p>Users expressed interest in editing capabilities and indicated they would still review the original request text, suggesting the summary should complement rather than replace existing workflows.</p>
+                </div>
+
+            </div>
+
+            <div class="results">
+                <h3>Research Impact</h3>
+                <p>This early-stage research provided crucial validation before significant development resources were committed. The strong positive response from users gave the product team confidence to move forward with implementation while highlighting specific design considerations around placement, permissions, and editing capabilities. By identifying both enthusiasm and concerns, the research enabled informed decision-making about feature scope and safeguards, ensuring the final implementation will maximize value while minimizing risk.</p>
+            </div>
+        </section>
+
+        
+        <!-- Reflection Section -->
+        <section class="project-section">
+            <h2>Reflection</h2>
+            <p>This research project offered valuable insights not only about the specific AI feature but also about our product development process and user needs. The early-stage research approach allowed us to validate hypotheses, identify potential issues, and make informed decisions before significant resources were committed.</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="challenges">Challenges</button>
+                    <button class="tab-button" data-tab="learnings">Learnings</button>
+                    <button class="tab-button" data-tab="next-steps">Next Steps</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="challenges">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Technical Uncertainties</h4>
+                                <p>Balancing AI accuracy with user expectations required extensive experimentation with prompting approaches to generate consistently useful summaries</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Research Scope</h4>
+                                <p>Determining the right combination of qualitative and quantitative methods to capture both depth of understanding and statistical confidence was a critical early decision</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>User Trust</h4>
+                                <p>Addressing concerns about AI reliability and potential liability required transparent communication about the system's capabilities and limitations</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Feature Positioning</h4>
+                                <p>Finding the right balance between promoting the AI summary as a workflow enhancement while acknowledging it should complement rather than replace human judgment</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Stakeholder Alignment</h4>
+                                <p>Ensuring product teams shared a common vision for how AI could responsibly enhance the user experience without introducing new risks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="learnings">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>User Value Confirmation</h4>
+                                <p>The strong positive response validated our hypothesis that AI summaries could significantly enhance workflow efficiency while identifying specific value drivers</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Implementation Insights</h4>
+                                <p>User feedback revealed important considerations about placement, permissions, and editing capabilities that will directly inform our design approach</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Trust Requirements</h4>
+                                <p>Users' concerns about liability highlighted the importance of transparent AI implementation with appropriate safeguards and human oversight</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Research Impact</h4>
+                                <p>Early-stage research proved invaluable in reducing development risk by identifying both opportunities and concerns before committing to implementation</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Workflow Integration</h4>
+                                <p>Understanding that users would still review original requests helped clarify that the feature should enhance rather than replace existing processes</p>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="next-steps">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Design Exploration</h4>
+                                <p>Develop and test multiple approaches to summary placement and visualization within the request workflow</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Permission Framework</h4>
+                                <p>Create a comprehensive model for viewing and editing permissions that addresses user concerns while maintaining workflow efficiency</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Implementation Planning</h4>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Success Metrics</h4>
+                                <p>Establish clear measures to evaluate the feature's impact on request processing efficiency and user satisfaction</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Continuous Improvement</h4>
+                                <p>Create a system for ongoing evaluation of summary quality and relevance based on user feedback and usage patterns</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+    </div> 
+    
+    <!-- Next Project Navigation -->
+    <section class="next-project">
+        <h3>Continue exploring my work</h3>
+        <div class="navigation-buttons">
+            <a href="color-theming.html" class="btn btn-secondary">←<span class=hidden> PREVIOUS</span></a>
+            <a href="index.html#work" class="btn btn-secondary">ALL PROJECTS</a>
+            <a href="govqa-request-forum.html" class="btn btn-secondary"><span class=hidden>NEXT </span>→</a>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
