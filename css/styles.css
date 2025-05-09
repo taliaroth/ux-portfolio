@@ -615,6 +615,18 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-size: 16px;
 }
 
+/* Add this new style to fix the issue */
+body.light-mode .nav-button {
+    color: #333; /* Darker text color for better readability */
+    border-color: #858585; /* Slightly darker border for better contrast */
+}
+
+/* Make sure the hover state also has good contrast */
+body.light-mode .nav-button:hover {
+    background-color: #f0f0f0;
+    color: #111; /* Even darker on hover for emphasis */
+}
+
 @media (max-width: 768px) {
     .navigation-buttons {
         gap: 15px;
