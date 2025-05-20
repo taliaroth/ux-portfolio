@@ -29,12 +29,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check for saved theme preference
     try {
+        // Explicitly ensure dark mode is default
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
+        
+        // If there's no saved preference, ensure it's set to dark
+        if (savedTheme === null) {
+            localStorage.setItem('theme', 'dark');
+            // Body already has no light-mode class by default, so we're good
+        }
+        // Only add light-mode class if that's the saved preference
+        else if (savedTheme === 'light') {
             document.body.classList.add('light-mode');
+        }
+        // If light-mode class somehow exists but shouldn't, remove it
+        else if (savedTheme === 'dark' && document.body.classList.contains('light-mode')) {
+            document.body.classList.remove('light-mode');
         }
     } catch (e) {
         console.log('localStorage not available');
+        // Ensure dark mode if localStorage isn't available
+        document.body.classList.remove('light-mode');
     }
 });
 
