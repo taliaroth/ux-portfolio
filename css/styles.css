@@ -1,19 +1,108 @@
-/* Reset and Base Styles */
+/* 
+ * Talia Roth Portfolio - Styles
+ * 
+ * TABLE OF CONTENTS
+ * 
+ * 1. CSS Variables (Custom Properties)
+ * 2. Reset and Base Styles
+ * 3. Header and Navigation
+ *    3.1 Logo
+ *    3.2 Desktop Navigation
+ *    3.3 Mobile Navigation
+ *    3.4 Theme Toggle
+ * 4. Hero Section
+ * 5. Buttons
+ * 6. Projects Section
+ *    6.1 Project Cards (Home Page)
+ *    6.2 Project Headers (Project Pages)
+ *    6.3 Project Content
+ * 7. Content Components
+ *    7.1 Two-Column Layout
+ *    7.2 Card Grids
+ *    7.3 Feature Cards
+ *    7.4 Results Section
+ * 8. Interactive Components
+ *    8.1 Tabs
+ *    8.2 Carousel
+ * 9. Media Components
+ *    9.1 Images and Captions
+ *    9.2 Videos
+ * 10. About Page
+ *    10.1 About Header
+ *    10.2 Skills Grid
+ *    10.3 Timeline
+ *    10.4 Get In Touch Section
+ * 11. Contact Page
+ * 12. Light Mode Styles
+ * 13. Responsive Design
+ *    13.1 Tablet (1024px and below)
+ *    13.2 Mobile (768px and below)
+ */
+
+/* ==========================================================================
+   1. CSS Variables (Custom Properties)
+   ========================================================================== */
+
+:root {
+    /* Colors - Dark Mode */
+    --bg-primary: #272626;
+    --bg-secondary: #000000;
+    --bg-tertiary: #111111;
+    --text-primary: #fff;
+    --text-secondary: #ccc;
+    --accent-color: #fff5b6;
+    --border-color: #606060;
+    
+    /* Colors - Light Mode */
+    --light-bg-primary: #f5f5f5;
+    --light-bg-secondary: #ffffff;
+    --light-text-primary: #333;
+    --light-text-secondary: #555;
+    --light-accent-color: #3d77f5;
+    --light-border-color: #858585;
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 15px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 50px;
+    
+    /* Transitions */
+    --transition-default: all 0.3s ease;
+    
+    /* Font Families */
+    --font-primary: 'Averia Serif Libre', serif;
+    --font-headings: 'League Spartan', sans-serif;
+}
+
+/* ==========================================================================
+   2. Reset and Base Styles
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
 }
 
 body {
-    background-color: #272626;
-    color: #fff;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
-    transition: all 0.3s ease;
+    transition: var(--transition-default);
 }
 
-/* Header and Navigation */
+/* ==========================================================================
+   3. Header and Navigation
+   ========================================================================== */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -26,7 +115,61 @@ header {
     top: 0;
 }
 
-/* Hamburger menu button - hidden by default on larger screens */
+/* 3.1 Logo */
+.logo {
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo-dark {
+    opacity: 1;
+}
+
+.logo-light {
+    opacity: 0;
+}
+
+/* 3.2 Desktop Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: var(--font-headings);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+}
+
+/* 3.3 Mobile Navigation */
 .menu-toggle {
     display: none;
     background: none;
@@ -48,7 +191,7 @@ header {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--text-primary);
     left: 0;
     transition: all 0.3s ease;
 }
@@ -76,41 +219,6 @@ header {
 
 .menu-open .hamburger-line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Updated Logo Styling */
-.logo {
-    display: block;
-    width: 36px;
-    height: 36px;
-    position: relative;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.3s ease;
-}
-
-.logo-dark {
-    opacity: 1;
-}
-
-.logo-light {
-    opacity: 0;
-}
-
-/* Light mode logo handling */
-body.light-mode .logo-dark {
-    opacity: 0;
-}
-
-body.light-mode .logo-light {
-    opacity: 1;
 }
 
 /* Mobile menu overlay */
@@ -149,64 +257,19 @@ body.light-mode .logo-light {
 }
 
 .mobile-nav-link {
-    color: #fff;
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 24px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
     transition: color 0.3s ease;
     display: block;
     padding: 10px 20px;
 }
 
-
-/* Light mode styles for mobile menu */
-body.light-mode .hamburger-line {
-    background-color: #333;
-}
-
-body.light-mode .mobile-menu-overlay {
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-body.light-mode .mobile-nav-link {
-    color: #333;
-}
-
-body.light-mode .mobile-nav-link:hover {
-    color: #3d77f5;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-family: 'League Spartan', sans-serif;
-    padding: 8px 16px;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    text-decoration: none;
-}
-
-/* Theme Toggle Button */
+/* 3.4 Theme Toggle */
 .theme-toggle {
     position: relative;
     width: 52px;
@@ -218,7 +281,7 @@ nav ul li a:hover {
     margin-left: 20px;
     padding: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: var(--transition-default);
 }
 
 .theme-toggle .toggle-track {
@@ -256,17 +319,10 @@ nav ul li a:hover {
     z-index: 2;
 }
 
-body.light-mode .theme-toggle {
-    background-color: #eee;
-    border-color: #ddd;
-}
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
 
-body.light-mode .theme-toggle .toggle-thumb {
-    transform: translateX(26px);
-    background-color: #3d77f5;
-}
-
-/* Hero Section */
 .hero {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-background.jpg');
@@ -283,9 +339,9 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-size: 200px;
     font-weight: 900;
     margin-bottom: 20px;
-    color: #fff5b6; /* Light pink color */
+    color: var(--accent-color);
     line-height: 1;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
     letter-spacing: -2px;
 }
 
@@ -293,20 +349,34 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-size: 22px;
     max-width: 650px;
     margin-bottom: 30px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
     font-weight: 300;
 }
+
+.photo-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: var(--font-primary);
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   5. Buttons
+   ========================================================================== */
 
 .btn {
     display: inline-block;
     background-color: #000;
-    color: #fff;
+    color: var(--text-primary);
     padding: 12px 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease;
-    font-family: 'League Spartan', sans-serif;
+    transition: var(--transition-default);
+    font-family: var(--font-headings);
     font-size: 16px;
     letter-spacing: 1px;
     width: fit-content;
@@ -323,9 +393,8 @@ body.light-mode .theme-toggle .toggle-thumb {
 }
 
 .btn-primary {
-    background-color: #fff5b6;
+    background-color: var(--accent-color);
     color: #000;
-    
 }
 
 .btn-primary:hover {
@@ -334,7 +403,7 @@ body.light-mode .theme-toggle .toggle-thumb {
 
 .btn-secondary {
     background-color: transparent;
-    color: #fff;
+    color: var(--text-primary);
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -344,17 +413,11 @@ body.light-mode .theme-toggle .toggle-thumb {
     border-color: #555;
 }
 
-.photo-credit {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 12px;
-    opacity: 0.8;
-    font-family: 'Averia Serif Libre', serif;
-    font-weight: 300;
-}
+/* ==========================================================================
+   6. Projects Section
+   ========================================================================== */
 
-/* Projects Section */
+/* 6.1 Project Cards (Home Page) */
 .projects {
     padding: 40px;
 }
@@ -362,7 +425,7 @@ body.light-mode .theme-toggle .toggle-thumb {
 .projects-intro {
     margin-bottom: 30px;
     font-size: 18px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
 }
 
 .projects-grid {
@@ -372,7 +435,7 @@ body.light-mode .theme-toggle .toggle-thumb {
 }
 
 .project-card {
-    background-color: #000000;
+    background-color: var(--bg-secondary);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -401,15 +464,15 @@ body.light-mode .theme-toggle .toggle-thumb {
 .project-info h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
     font-weight: 700;
 }
 
 .project-info p {
-    color: #ccc;
+    color: var(--text-secondary);
     font-size: 14px;
     margin-bottom: 15px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
     font-weight: 300;
 }
 
@@ -421,20 +484,20 @@ body.light-mode .theme-toggle .toggle-thumb {
 
 .tag {
     background-color: #333;
-    color: #fff;
+    color: var(--text-primary);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
 }
 
-/* Project Header (for individual project pages) */
+/* 6.2 Project Headers (Project Pages) */
 .project-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 50vh;
-    background-color: #000;
+    background-color: var(--bg-secondary);
     padding: 0 40px;
     position: relative;
     margin-top: 70px;
@@ -461,9 +524,9 @@ body.light-mode .theme-toggle .toggle-thumb {
 .project-header h1 {
     font-size: 64px;
     font-weight: 600;
-    color: #fff5b6;
+    color: var(--accent-color);
     line-height: 1;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
     letter-spacing: -1px;
     margin-bottom: 20px;
 }
@@ -478,12 +541,12 @@ body.light-mode .theme-toggle .toggle-thumb {
 .project-header p {
     font-size: 18px;
     max-width: 650px;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: var(--font-primary);
     font-weight: 300;
     margin-bottom: 20px;
 }
 
-
+/* 6.3 Project Content */
 .project-content {
     padding: 40px;
     max-width: 1200px;
@@ -498,8 +561,8 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 20px;
-    font-family: 'League Spartan', sans-serif;
-    color: #fff5b6;
+    font-family: var(--font-headings);
+    color: var(--accent-color);
 }
 
 .project-section h3 {
@@ -507,8 +570,8 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-weight: 400;
     margin-bottom: 15px;
     margin-top: 30px;
-    font-family: 'League Spartan', sans-serif;
-    color:#ccc
+    font-family: var(--font-headings);
+    color: var(--text-secondary);
 }
 
 .project-section p {
@@ -517,55 +580,20 @@ body.light-mode .theme-toggle .toggle-thumb {
     max-width: 1200px;
 }
 
-.project-section ul, .project-section ol {
+.project-section ul, 
+.project-section ol {
     margin-bottom: 20px;
     margin-left: 20px;
-    max-width: 1200px
+    max-width: 1200px;
 }
 
 .project-section li {
     margin-bottom: 10px;
 }
 
-/* Image Display */
-.image-container {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    max-height: 85vh;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.image-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-    font-style: italic;
-}
-
-/* Results Section */
-.results {
-    background-color: #111111;
-    border-width: 2px;
-    padding: 40px;
-    border-radius: 8px;
-    margin: 30px 0;
-}
-
-.results h3 {
-    color: #fff5b6;
-}
-
 /* Next Project Navigation */
 .next-project {
-    background-color: #000;
+    background-color: var(--bg-secondary);
     padding: 30px 40px;
     text-align: center;
 }
@@ -573,7 +601,7 @@ body.light-mode .theme-toggle .toggle-thumb {
 .next-project h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
     font-weight: 400;
 }
 
@@ -593,13 +621,13 @@ body.light-mode .theme-toggle .toggle-thumb {
     width: 60px;
     height: 60px;
     background-color: transparent;
-    color: #fff;
+    color: var(--text-primary);
     border-radius: 50%;
     border: 1px solid #555;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: var(--transition-default);
     font-size: 24px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
 }
 
 .nav-button:hover {
@@ -615,49 +643,305 @@ body.light-mode .theme-toggle .toggle-thumb {
     font-size: 16px;
 }
 
-/* Add this new style to fix the issue */
-body.light-mode .nav-button {
-    color: #333; /* Darker text color for better readability */
-    border-color: #858585; /* Slightly darker border for better contrast */
-}
+/* ==========================================================================
+   7. Content Components
+   ========================================================================== */
 
-/* Make sure the hover state also has good contrast */
-body.light-mode .nav-button:hover {
-    background-color: #f0f0f0;
-    color: #111; /* Even darker on hover for emphasis */
-}
-
-@media (max-width: 768px) {
-    .navigation-buttons {
-        gap: 15px;
-    }
-    
-    .nav-button {
-        width: 70px;
-        height: 70px;
-        font-size: 28px;
-    }
-    
-    .nav-button.all-projects {
-        height: 70px;
-        padding: 0 20px;
-    }
-    
-    .next-project {
-        padding: 25px 15px;
-    }
-}
-
- /* Two-column layout for process */
- .two-columns {
+/* 7.1 Two-Column Layout */
+.two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin: 30px 0;
 }
 
+/* 7.2 Card Grids */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
 
-/* About Page Styles */
+/* 7.3 Feature Cards */
+.feature-card {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-color);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.feature-card-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+}
+
+.feature-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-headings);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* 7.4 Results Section */
+.results {
+    background-color: var(--bg-tertiary);
+    border-width: 2px;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.results h3 {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   8. Interactive Components
+   ========================================================================== */
+
+/* 8.1 Tabs */
+.tab-container {
+    margin: 30px 0;
+}
+
+.tab-nav {
+    display: flex;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.tab-nav::-webkit-scrollbar {
+    display: none; /* For Chrome and Safari */
+}
+
+.tab-button {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font-headings);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab-button:hover {
+    color: var(--text-primary);
+}
+
+.tab-button.active {
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    margin-bottom: -2px;
+}
+
+.tab-content {
+    position: relative;
+}
+
+.tab-pane {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    width: 100%;
+}
+
+.tab-pane.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
+
+.tab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tab-card {
+    border-style: solid;
+    border-color: var(--border-color);
+    border-radius: 8px;
+    padding: 16px 20px;
+    height: 100%;
+}
+
+.tab-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--accent-color);
+    font-family: var(--font-headings);
+}
+
+.tab-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* 8.2 Carousel */
+.carousel-container {
+    margin: 30px 0;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    object-fit: contain; /* This ensures the entire image is visible */
+    display: block;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: #000;
+    color: var(--text-primary);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #333;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: var(--accent-color);
+}
+
+/* ==========================================================================
+   9. Media Components
+   ========================================================================== */
+
+/* 9.1 Images and Captions */
+.image-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* 9.2 Videos */
+.video-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.video-container video {
+    width: 90%; /* Takes up more horizontal space */
+    max-width: 1200px; /* Maximum width cap */
+    max-height: 85vh; /* Slightly higher percentage of viewport height */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.video-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   10. About Page
+   ========================================================================== */
+
+/* 10.1 About Header */
 .about-container {
     max-width: 1200px;
     margin: 100px auto 0;
@@ -671,12 +955,12 @@ body.light-mode .nav-button:hover {
     margin-bottom: 60px;
 }
 
-.about-header h1{
+.about-header h1 {
     font-size: 64px;
     font-weight: 600;
-    color: #fff5b6;
+    color: var(--accent-color);
     line-height: 1;
-    font-family: 'League Spartan', sans-serif;
+    font-family: var(--font-headings);
     letter-spacing: -1px;
     margin-bottom: 20px;
 }
@@ -686,7 +970,7 @@ body.light-mode .nav-button:hover {
     padding-right: 40px;
 }
 
-.about-text p{
+.about-text p {
     margin-bottom: 20px;
 }
 
@@ -701,7 +985,7 @@ body.light-mode .nav-button:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Skills Grid */
+/* 10.2 Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -711,55 +995,293 @@ body.light-mode .nav-button:hover {
 .skill-category h4 {
     font-size: 18px;
     margin-bottom: 10px;
-    font-family: 'League Spartan', sans-serif;
-    color: #fff5b6;
+    font-family: var(--font-headings);
+    color: var(--accent-color);
 }
 
-/* Light mode styles */
+/* 10.3 Timeline */
+.timeline {
+    margin: 30px 0;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 120px;
+    width: 2px;
+    background-color: #333;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.timeline-date {
+    width: 100px;
+    text-align: right;
+    padding-right: 20px;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.timeline-content {
+    margin-left: 40px;
+    background-color: var(--bg-tertiary);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: var(--font-headings);
+    color: var(--text-primary);
+}
+
+.timeline-content p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* 10.4 Get In Touch Section */
+.get-in-touch-section {
+    background-color: var(--bg-secondary);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.get-in-touch-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.get-in-touch-section h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: var(--font-headings);
+    color: var(--accent-color);
+}
+
+.get-in-touch-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.get-in-touch-section .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.get-in-touch-section .btn:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   11. Contact Page
+   ========================================================================== */
+
+.contact-page {
+    padding-top: 120px;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.contact-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px 60px;
+}
+
+.contact-page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-page-header h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1;
+    font-family: var(--font-headings);
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.contact-page-header p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--font-primary);
+    font-weight: 300;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: var(--font-headings);
+    font-weight: 500;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: var(--font-primary);
+    font-weight: 300;
+}
+
+.contact-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #e6d968;
+    text-decoration: underline;
+}
+
+.connect-cta {
+    background-color: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.connect-cta h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: var(--font-headings);
+    font-weight: 500;
+}
+
+.connect-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.connect-cta .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   12. Light Mode Styles
+   ========================================================================== */
+
 body.light-mode {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--light-bg-primary);
+    color: var(--light-text-primary);
 }
 
+/* Light Mode - Logo */
+body.light-mode .logo-dark {
+    opacity: 0;
+}
+
+body.light-mode .logo-light {
+    opacity: 1;
+}
+
+/* Light Mode - Header & Navigation */
 body.light-mode header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 body.light-mode nav ul li a {
-    color: #333;
+    color: var(--light-text-primary);
 }
 
 body.light-mode nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.08);
 }
 
+/* Light Mode - Mobile Navigation */
+body.light-mode .hamburger-line {
+    background-color: var(--light-text-primary);
+}
+
+body.light-mode .mobile-menu-overlay {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .mobile-nav-link {
+    color: var(--light-text-primary);
+}
+
+body.light-mode .mobile-nav-link:hover {
+    color: var(--light-accent-color);
+}
+
+/* Light Mode - Theme Toggle */
+body.light-mode .theme-toggle {
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+body.light-mode .theme-toggle .toggle-thumb {
+    transform: translateX(26px);
+    background-color: var(--light-accent-color);
+}
+
+/* Light Mode - Hero Section */
 body.light-mode .hero {
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../images/hero-background.jpg');
 }
 
-body.light-mode .hero h1,
-body.light-mode .about-header h1,
-body.light-mode .project-header h1,
-body.light-mode .project-section h2,
-body.light-mode .skill-category h4 {
-    color: #3d77f5;
+body.light-mode .hero h1 {
+    color: var(--light-accent-color);
 }
 
-body.light-mode .project-header,
-body.light-mode .next-project,
-body.light-mode .results {
-    background-color: #ffffff;
-}
-
-body.light-mode .project-section h3,
-body.light-mode .image-caption {
-    color: #646464;
-}
-
+/* Light Mode - Buttons */
 body.light-mode .btn {
     background-color: #fff;
-    color: #333;
+    color: var(--light-text-primary);
     border-color: #ddd;
 }
 
@@ -773,25 +1295,212 @@ body.light-mode .btn:hover {
     background-color: #f0f0f0;
 }
 
+body.light-mode .btn-primary {
+    background-color: var(--light-accent-color);
+    color: #fff;
+}
+
+body.light-mode .btn-primary:hover {
+    background-color: #2a68e5;
+}
+
+/* Light Mode - Project Cards */
 body.light-mode .project-card {
-    background-color: #fff;
+    background-color: var(--light-bg-secondary);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 body.light-mode .project-info h3 {
-    color: #333;
+    color: var(--light-text-primary);
 }
 
 body.light-mode .project-info p {
-    color: #555;
+    color: var(--light-text-secondary);
 }
 
 body.light-mode .tag {
     background-color: #eee;
-    color: #333;
+    color: var(--light-text-primary);
 }
 
-/* Responsive Design */
+/* Light Mode - Project Header */
+body.light-mode .project-header,
+body.light-mode .next-project {
+    background-color: var(--light-bg-secondary);
+}
+
+body.light-mode .project-header h1,
+body.light-mode .about-header h1,
+body.light-mode .project-section h2,
+body.light-mode .skill-category h4 {
+    color: var(--light-accent-color);
+}
+
+body.light-mode .project-section h3,
+body.light-mode .image-caption,
+body.light-mode .video-caption {
+    color: #646464;
+}
+
+body.light-mode .project-header-image img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode - Navigation Buttons */
+body.light-mode .nav-button {
+    color: var(--light-text-primary);
+    border-color: #858585;
+}
+
+body.light-mode .nav-button:hover {
+    background-color: #f0f0f0;
+    color: #111;
+}
+
+/* Light Mode - Feature Cards */
+body.light-mode .feature-card {
+    border-color: var(--light-border-color);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+body.light-mode .feature-card h4,
+body.light-mode .tab-card h4,
+body.light-mode .results h3 {
+    color: var(--light-accent-color);
+}
+
+body.light-mode .feature-card p,
+body.light-mode .tab-card p {
+    color: var(--light-text-secondary);
+}
+
+body.light-mode .feature-card-icon {
+    color: var(--light-accent-color);
+}
+
+/* Light Mode - Results Section */
+body.light-mode .results {
+    background-color: var(--light-bg-secondary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Light Mode - Tabs */
+body.light-mode .tab-nav {
+    border-bottom-color: #ddd;
+}
+
+body.light-mode .tab-button {
+    color: #666;
+}
+
+body.light-mode .tab-button:hover {
+    color: var(--light-text-primary);
+}
+
+body.light-mode .tab-button.active {
+    color: var(--light-accent-color);
+    border-bottom-color: var(--light-accent-color);
+}
+
+body.light-mode .tab-card {
+    border-color: var(--light-border-color);
+}
+
+/* Light Mode - Carousel */
+body.light-mode .carousel-prev,
+body.light-mode .carousel-next {
+    background-color: #fff;
+    color: var(--light-text-primary);
+    border: 1px solid #ddd;
+}
+
+body.light-mode .carousel-prev:hover,
+body.light-mode .carousel-next:hover {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .carousel-indicator {
+    background-color: #ccc;
+}
+
+body.light-mode .carousel-indicator.active {
+    background-color: var(--light-accent-color);
+}
+
+/* Light Mode - Media */
+body.light-mode .image-container img,
+body.light-mode .video-container video {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Light Mode - About Page */
+body.light-mode .about-image img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode - Timeline */
+body.light-mode .timeline:before {
+    background-color: #ddd;
+}
+
+body.light-mode .timeline-date {
+    color: var(--light-accent-color);
+}
+
+body.light-mode .timeline-content {
+    background-color: var(--light-bg-secondary);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.light-mode .timeline-content h3 {
+    color: var(--light-text-primary);
+}
+
+body.light-mode .timeline-content p {
+    color: var(--light-text-secondary);
+}
+
+/* Light Mode - Get In Touch */
+body.light-mode .get-in-touch-section {
+    background-color: var(--light-bg-primary);
+}
+
+body.light-mode .get-in-touch-section h2 {
+    color: var(--light-accent-color);
+}
+
+/* Light Mode - Contact Page */
+body.light-mode .contact-card {
+    background-color: var(--light-bg-secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.light-mode .contact-card p {
+    color: var(--light-text-secondary);
+}
+
+body.light-mode .contact-card a {
+    color: var(--light-accent-color);
+}
+
+body.light-mode .contact-card a:hover {
+    color: #2a68e5;
+}
+
+body.light-mode .connect-cta {
+    background-color: var(--light-bg-secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.light-mode .connect-cta p {
+    color: var(--light-text-secondary);
+}
+
+/* ==========================================================================
+   13. Responsive Design
+   ========================================================================== */
+
+/* 13.1 Tablet (1024px and below) */
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 100px;
@@ -844,11 +1553,24 @@ body.light-mode .tag {
     }
 }
 
+/* 13.2 Mobile (768px and below) */
 @media (max-width: 768px) {
+    /* Mobile - Header */
     header {
         padding: 15px 20px;
     }
     
+    /* Mobile - Main Navigation (Hide) */
+    .main-nav {
+        display: none;
+    }
+    
+    /* Mobile - Show Hamburger Button */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Mobile - Hero */
     .hero {
         padding: 0 20px;
     }
@@ -861,6 +1583,7 @@ body.light-mode .tag {
         font-size: 18px;
     }
     
+    /* Mobile - Content Padding */
     .projects,
     .project-content {
         padding: 20px;
@@ -869,15 +1592,13 @@ body.light-mode .tag {
     .project-header {
         padding-top: 80px;
     }
-
-    .project-content {
-        padding: 20px;
-    }
     
+    /* Mobile - Section Headings */
     .project-section h2 {
         font-size: 30px;
     }
     
+    /* Mobile - Grids */
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
@@ -886,123 +1607,38 @@ body.light-mode .tag {
     .project-header h1 {
         font-size: 40px;
     }
-
-    /* Hide desktop nav */
-    .main-nav {
-        display: none;
+    
+    /* Mobile - Navigation Buttons */
+    .navigation-buttons {
+        gap: 15px;
     }
     
-    /* Show hamburger button */
-    .menu-toggle {
-        display: block;
+    .nav-button {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
     }
-}
-
-/* Carousel styling */
-.carousel-container {
-    margin: 30px 0;
-    position: relative;
-}
-
-.carousel {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    transition: opacity 0.3s ease;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 400px; /* Fixed height */
-    object-fit: contain; /* This ensures the entire image is visible */
-    display: block;
-}
-
-.carousel-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    gap: 15px;
-}
-
-.carousel-prev,
-.carousel-next {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-    background-color: #333;
-}
-
-.carousel-indicators {
-    display: flex;
-    gap: 8px;
-}
-
-.carousel-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #555;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-indicator.active {
-    background-color: #fff5b6; /* Using your theme's pink color */
-}
-
-/* Light mode styles */
-body.light-mode .carousel-prev,
-body.light-mode .carousel-next {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-}
-
-body.light-mode .carousel-prev:hover,
-body.light-mode .carousel-next:hover {
-    background-color: #f0f0f0;
-}
-
-body.light-mode .carousel-indicator {
-    background-color: #ccc;
-}
-
-body.light-mode .carousel-indicator.active {
-    background-color: #3d77f5; /* Using your light mode theme blue */
-}
-
-body.light-mode .project-header-image img {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Make carousel responsive */
-@media (max-width: 768px) {
+    
+    .nav-button.all-projects {
+        height: 70px;
+        padding: 0 20px;
+    }
+    
+    .next-project {
+        padding: 25px 15px;
+    }
+    
+    /* Mobile - Tabs */
+    .tab-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    /* Mobile - Carousel */
     .carousel-prev,
     .carousel-next {
         width: 30px;
@@ -1014,386 +1650,25 @@ body.light-mode .project-header-image img {
         width: 8px;
         height: 8px;
     }
-}
-
-@media (min-width: 769px) {
-    /* Hide mobile menu and ensure desktop menu is visible */
-    .mobile-menu-overlay {
-        display: none;
+    
+    /* Mobile - About Page */
+    .contact-page-container {
+        padding: 0 20px 40px;
     }
-}
-
-/* Video styling */
-.video-container {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.video-container video {
-    width: 90%; /* Takes up more horizontal space */
-    max-width: 1200px; /* Maximum width cap */
-    max-height: 85vh; /* Slightly higher percentage of viewport height */
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.video-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-    font-style: italic;
-}
-
-/* Light mode adjustment */
-body.light-mode .video-container video {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-body.light-mode .video-caption {
-    color: #646464;
-}
-
-
-/* tab styling */
-.tab-container {
-    margin: 30px 0;
-}
-
-.tab-nav {
-    display: flex;
-    border-bottom: 2px solid #333;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    scrollbar-width: none; /* For Firefox */
-}
-
-.tab-nav::-webkit-scrollbar {
-    display: none; /* For Chrome and Safari */
-}
-
-.tab-button {
-    padding: 12px 20px;
-    background: none;
-    border: none;
-    color: #ccc;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.tab-button:hover {
-    color: #fff;
-}
-
-.tab-button.active {
-    color: #fff5b6;
-    border-bottom: 3px solid #fff5b6;
-    margin-bottom: -2px;
-}
-
-.tab-content {
-    position: relative;
-}
-
-.tab-pane {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
-    position: absolute;
-    width: 100%;
-}
-
-.tab-pane.active {
-    opacity: 1;
-    visibility: visible;
-    height: auto;
-    position: relative;
-}
-
-.tab-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.tab-card {
-    border-style: solid;
-    border-color: #606060;
-    border-radius: 8px;
-    padding: 16px 20px;
-    height: 100%;
-}
-
-.tab-card h4 {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff5b6;
-    font-family: 'League Spartan', sans-serif;
-}
-
-.tab-card p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Light mode adjustments */
-body.light-mode .tab-nav {
-    border-bottom-color: #ddd;
-}
-
-body.light-mode .tab-button {
-    color: #666;
-}
-
-body.light-mode .tab-button:hover {
-    color: #333;
-}
-
-body.light-mode .tab-button.active {
-    color: #3d77f5;
-    border-bottom-color: #3d77f5;
-}
-
-body.light-mode .tab-card {
-    border-color: #858585;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-body.light-mode .tab-card h4 {
-    color: #3d77f5;
-}
-
-body.light-mode .tab-card p {
-    color: #555;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .tab-grid {
+    
+    .contact-page-header h1 {
+        font-size: 40px;
+    }
+    
+    .contact-options {
         grid-template-columns: 1fr;
     }
     
-    .tab-button {
-        padding: 10px 16px;
-        font-size: 14px;
+    .connect-cta {
+        padding: 30px 20px;
     }
-}
-
-/* Card-based layout for bullet points */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.feature-card {
-    border-radius: 8px;
-    border-style: solid;
-    border-color: #606060;
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.feature-card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.feature-card-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff5b6;
-}
-
-.feature-card h4 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
-    color: #fff5b6;
-    font-family: 'League Spartan', sans-serif;
-}
-
-.feature-card p {
-    color: #ccc;
-    font-size: 14px;
-    margin: 0;
-    flex-grow: 1;
-}
-
-/* Light mode styles */
-body.light-mode .feature-card {
-    border-color: #858585;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-body.light-mode .feature-card h4 {
-    color: #3d77f5;
-}
-
-body.light-mode .feature-card p {
-    color: #555;
-}
-
-body.light-mode .feature-card-icon {
-    color: #3d77f5;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Additional styles for About page */
-
-/* Timeline styling */
-.timeline {
-    margin: 30px 0;
-    position: relative;
-}
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 120px;
-    width: 2px;
-    background-color: #333;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    display: flex;
-}
-
-.timeline-date {
-    width: 100px;
-    text-align: right;
-    padding-right: 20px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 600;
-    color: #fff5b6;
-}
-
-.timeline-content {
-    margin-left: 40px;
-    background-color: #111111;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1;
-}
-
-.timeline-content h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-family: 'League Spartan', sans-serif;
-    color: #fff;
-}
-
-.timeline-content p {
-    font-size: 14px;
-    margin: 0;
-    color: #ccc;
-}
-
-/* Get in Touch section styling */
-.get-in-touch-section {
-    background-color: #000;
-    padding: 80px 40px;
-    text-align: center;
-}
-
-.get-in-touch-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.get-in-touch-section h2 {
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    font-family: 'League Spartan', sans-serif;
-    color: #fff5b6;
-}
-
-.get-in-touch-section p {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 18px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.get-in-touch-section .btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.get-in-touch-section .btn:hover {
-    transform: translateY(-5px);
-}
-
-/* Light mode adjustments */
-body.light-mode .timeline:before {
-    background-color: #ddd;
-}
-
-body.light-mode .timeline-date {
-    color: #3d77f5;
-}
-
-body.light-mode .timeline-content {
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-body.light-mode .timeline-content h3 {
-    color: #333;
-}
-
-body.light-mode .timeline-content p {
-    color: #555;
-}
-
-body.light-mode .get-in-touch-section {
-    background-color: #f5f5f5;
-}
-
-body.light-mode .get-in-touch-section h2 {
-    color: #3d77f5;
-}
-
-body.light-mode .get-in-touch-section .btn {
-    background-color: #3d77f5;
-    color: #fff;
-}
-
-body.light-mode .get-in-touch-section .btn:hover {
-    background-color: #2a68e5;
-}
-
-/* Mobile responsiveness for About page */
-@media (max-width: 768px) {
+    
+    /* Mobile - Timeline */
     .timeline:before {
         left: 20px;
     }
@@ -1412,195 +1687,12 @@ body.light-mode .get-in-touch-section .btn:hover {
     .timeline-content {
         margin-left: 40px;
     }
-    
-    .contact-methods {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .contact-method {
-        width: 100%;
-        max-width: 300px;
-    }
 }
 
-/* Contact page specific styles */
-
-.contact-page {
-    padding-top: 120px;
-    min-height: 100vh;
-    background-color: #272626;
-}
-
-.contact-page-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px 60px;
-}
-
-.contact-page-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.contact-page-header h1 {
-    font-size: 60px;
-    font-weight: 700;
-    color: #fff5b6;
-    line-height: 1;
-    font-family: 'League Spartan', sans-serif;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-}
-
-.contact-page-header p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: 'Averia Serif Libre', serif;
-    font-weight: 300;
-}
-
-.contact-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.contact-card {
-    background-color: #000000;
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-}
-
-.contact-card-icon {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 500;
-}
-
-.contact-card p {
-    color: #ccc;
-    font-size: 14px;
-    margin-bottom: 15px;
-    font-family: 'Averia Serif Libre', serif;
-    font-weight: 300;
-}
-
-.contact-card a {
-    color: #fff5b6;
-    text-decoration: none;
-    font-family: 'Averia Serif Libre', serif;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.contact-card a:hover {
-    color: #e6d968;
-    text-decoration: underline;
-}
-
-.connect-cta {
-    background-color: #111111;
-    border-radius: 8px;
-    padding: 40px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.connect-cta h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 500;
-}
-
-.connect-cta p {
-    color: #ccc;
-    margin-bottom: 20px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.connect-cta .btn {
-    padding: 12px 24px;
-    font-size: 16px;
-}
-
-/* Light mode adjustments */
-body.light-mode .contact-page {
-    background-color: #f5f5f5;
-}
-
-body.light-mode .contact-page-header h1 {
-    color: #3d77f5;
-}
-
-body.light-mode .contact-card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-body.light-mode .contact-card p {
-    color: #555;
-}
-
-body.light-mode .contact-card a {
-    color: #3d77f5;
-}
-
-body.light-mode .contact-card a:hover {
-    color: #2a68e5;
-}
-
-body.light-mode .connect-cta {
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-body.light-mode .connect-cta p {
-    color: #555;
-}
-
-body.light-mode .connect-cta .btn {
-    background-color: #3d77f5;
-    color: #fff;
-}
-
-body.light-mode .connect-cta .btn:hover {
-    background-color: #2a68e5;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .contact-page-container {
-        padding: 0 20px 40px;
-    }
-    
-    .contact-page-header h1 {
-        font-size: 40px;
-    }
-    
-    .contact-options {
-        grid-template-columns: 1fr;
-    }
-    
-    .connect-cta {
-        padding: 30px 20px;
+/* Hide mobile menu on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-overlay {
+        display: none;
     }
 }
 
