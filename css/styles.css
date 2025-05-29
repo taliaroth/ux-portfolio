@@ -399,7 +399,7 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #e6d968;
+    background-color: #E0D8A0;
 }
 
 .btn-secondary {
@@ -927,7 +927,7 @@ nav ul li a:hover {
 }
 
 .image-caption a:hover {
-    color: #e6d968; /* Slightly darker version of accent color */
+    color: #E0D8A0; /* Slightly darker version of accent color */
     border-bottom: 1px solid var(--accent-color);
     text-decoration: none;
 }
@@ -1099,11 +1099,7 @@ nav ul li a:hover {
 .get-in-touch-section .btn {
     padding: 15px 30px;
     font-size: 18px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.get-in-touch-section .btn:hover {
-    transform: translateY(-5px);
+    transition: background-color 0.3s ease;
 }
 
 /* ==========================================================================
@@ -1193,7 +1189,7 @@ nav ul li a:hover {
 }
 
 .contact-card a:hover {
-    color: #e6d968;
+    color: #E0D8A0;
     text-decoration: underline;
 }
 
@@ -1317,7 +1313,7 @@ body.light-mode .btn-primary {
 }
 
 body.light-mode .btn-primary:hover {
-    background-color: #2a68e5;
+    background-color: #5487F6;
 }
 
 /* Light Mode - Project Cards */
@@ -1364,7 +1360,7 @@ body.light-mode .image-caption a {
 }
 
 body.light-mode .image-caption a:hover {
-    color: #2a68e5; /* Slightly darker version of light accent color */
+    color: #5487F6; /* Slightly darker version of light accent color */
     border-bottom: 1px solid var(--light-accent-color);
 }
 
@@ -1510,7 +1506,7 @@ body.light-mode .contact-card a {
 }
 
 body.light-mode .contact-card a:hover {
-    color: #2a68e5;
+    color: #5487F6;
 }
 
 body.light-mode .connect-cta {
