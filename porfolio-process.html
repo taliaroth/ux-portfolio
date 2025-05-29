@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Process - Talia Roth Portfolio</title>
+    <!-- Import fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add the password protection CSS -->
+    <link rel="stylesheet" href="css/password-protection.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index" class="logo">
+            <img src="images/logo/logo-dark.png" alt="Talia Roth Logo" class="logo-dark">
+            <img src="images/logo/logo-light.png" alt="Talia Roth Logo" class="logo-light">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index">MY WORK</a></li>
+                <li><a href="about">ABOUT</a></li>
+                <li><a href="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <div class="toggle-track">
+                <span class="toggle-icon">☀️</span>
+                <span class="toggle-icon">🌙</span>
+            </div>
+            <div class="toggle-thumb"></div>
+        </button>
+        
+        <!-- Mobile overlay menu -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index" class="mobile-nav-link">MY WORK</a></li>
+                    <li><a href="about" class="mobile-nav-link">ABOUT</a></li>
+                    <li><a href="contact" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-header">
+        <div class="project-header-content">
+            <h1>Portfolio Process</h1>
+            <div class="tags">
+                <span class="tag">Research</span>
+                <span class="tag">Ideation</span>
+                <span class="tag">Design</span>
+            </div>
+            <p>I designed and built my portfolio site through Figma and Claude, an AI tool. I used it to generate and refine code based on my mockups while ensuring the user experience matched my vision.</p>
+        </div>
+        <div class="project-header-image">
+            <img src="images/potfolio-process/FigmaFile.png" alt="Portfolio Process Figma File">
+        </div>
+    </section>
+
+    <div class="project-content">
+        <!-- Overview Section -->
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>I partnered with Claude AI to design and develop a fully customized portfolio that maintains both creative freedom and ease of updates while ensuring it's intuitive and easily scannable.</p>
+            
+            <div class="two-columns">
+                <div>
+                    <h3>My Role</h3>
+                    <p>UX Designer & Developer</p>
+                    
+                    <h3>Timeline</h3>
+                    <p>5 weeks (April 2025 - May 2025)</p>
+                </div>
+                <div>
+                    <h3>Tools Used</h3>
+                    <p>Figma, Claude AI, HTML/CSS/JavaScript</p>
+                    
+                    <h3>Deliverables</h3>
+                    <p>Design mockups, responsive website, password protection system, project templates</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>As a UX designer, I needed a portfolio that would effectively showcase my work while being easy to maintain and update. Traditional portfolio solutions created a frustrating dilemma between convenience and creative control, leaving me unable to achieve the user experience I envisioned.
+
+</p>
+            
+            <h3>Key Issues</h3>
+
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Limited Customization</h4>
+                    </div>
+                    <p>Portfolio platforms like Squarespace and Webflow offered templates but restricted my ability to create the exact user experience I wanted</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Technical Barriers</h4>
+                    </div>
+                    <p>Building from scratch is time-consuming and limits my ability to iterate quickly</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Maintenance Overhead</h4>
+                    </div>
+                    <p>Custom-built portfolios often become difficult to maintain over time, especially when adding new projects or making design updates</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-card-icon">!</div>
+                        <h4>Content Protection</h4>
+                    </div>
+                    <p>Many of my projects contain sensitive client information that needed to be selectively protected while still allowing portfolio viewing</p>
+                </div>
+             
+            </div>
+        </section>
+
+        <!-- Initial Ideation Section -->
+        <section class="project-section">
+            <h2>Initial Ideation</h2>
+            <p>I began this project with a clear design principle in mind: creating a portfolio that would be easily scannable while still providing meaningful depth for those who wanted to dive deeper into my work and process.</p>
+            
+            <h3>Framing the Space</h3>
+            <p>My primary objective was scannability. I wanted visitors to quickly understand three key things about my work: what types of projects I've tackled, what skills I brought to each project, and for those willing to invest more time, a clear view of my design process.</p>
+            
+            <div class="image-container">
+                <img src="images/potfolio-process/goalsScreenshot.png" alt="Goals diagram">
+                <div class="image-caption">Outlining my goals</div>
+            </div>
+            
+            <h3>Pattern Recognition</h3>
+            <p>I analyzed what makes content easily scannable in my own browsing behavior. This led me to incorporate specific design patterns: skill chips for quick skill identification and structured project cards that provide just enough context to spark interest while maintaining visual consistency.</p>
+            
+            <h3>Visual Design Foundation</h3>
+            <p>I started designing the overall aesthetic in Figma, focusing on creating a clean, professional look that would support the scannability goal. However, as I progressed through the design phase, I became overwhelmed by the prospect of hand-coding and maintaining a custom site.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/colorThemes.png" alt="Color themes">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/typography.png" alt="Typography">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/buttonComponents.png" alt="Button components">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Designs I started in Figma. <a href="https://www.figma.com/design/HKI83xXsMLwpvnhWLcoDGt/Design-System?node-id=45-23&t=T1vaO2cOeYVTInci-1">View the file here.</a></div>
+            </div>
+
+            <h3>The AI Solution Discovery</h3>
+            <p>While researching alternatives to traditional portfolio platforms, I discovered that Claude AI excelled at generating clean, semantic code from design mockups. Given my existing HTML/CSS/JavaScript knowledge, this seemed like the perfect middle ground between platform limitations and coding complexity.</p>
+
+        <!-- Prompting Strategy Section -->
+        <section class="project-section">
+            <h2>Prompting Strategy</h2>
+            <p>Working effectively with Claude required more than just asking for code—it demanded strategic communication to ensure we shared the same vision and goals. I developed a systematic approach to prompting that consistently produced results aligned with my design intentions.</p>
+            
+            <h3>Framing the Context</h3>
+            <p>Every interaction began with clear context-setting. I established that I was building a UX portfolio specifically designed to be easily scannable for hiring managers, recruiters, and industry professionals. This framing helped Claude understand not just what I was building, but who would be using it and how.</p>
+            
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/claudePortfolioProject.png" alt="Claude project">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/claudePortfolioChat.png" alt="Claude chat">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">Examples of how I used Claude</div>
+            </div>
+
+            
+            <h3>Consistency Requirements</h3>
+            <p>I made styling consistency a explicit requirement in my prompts, referencing existing design elements and asking Claude to maintain visual harmony across all pages. This proactive approach prevented style drift and reduced the need for extensive revisions.</p>
+
+            <h3>Iterative Refinement</h3>
+            <p>Always established the project type (UX portfolio) and target audience (hiring managers, recruiters) to align Claude's approach with user needs.</p>
+
+        
+        <!-- Solution Section -->
+        <section class="project-section">
+            <h2>Solution: AI-Powered Custom Portfolio Development</h2>
+            <p>The solution delivered a fully customized portfolio that balanced creative control with practical efficiency. By partnering with Claude AI, I achieved the best of both worlds: complete design freedom without the traditional time and maintenance overhead of custom development.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Rapid Customization:</strong> Transformed Figma mockups into functional code within hours rather than weeks</li>
+                <li><strong>Easy Maintenance:</strong> Simple prompting process for updates and new project additions</li>
+                <li><strong>Cost Efficiency:</strong> Eliminated monthly platform fees in favor of occasional AI tool access</li>
+                <li><strong>UX Focus:</strong> Allowed me to concentrate on user experience decisions while delegating technical implementation</li>
+                <li><strong>Future-Minded:</strong> Created a system that can evolve with my needs and new AI capabilities</li>
+            </ul>
+
+            <div class="image-container">
+                <section class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/homePage.png" alt="Portfolio home page">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/potfolio-process/customCode.png" alt="Custome code">
+                            </div>
+                            <!-- You can add more slides as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" aria-label="Previous slide">&#10094;</button>
+                        <div class="carousel-indicators"></div>
+                        <button class="carousel-next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </section>
+                <div class="image-caption">The home page and a screenshot of my code</div>
+            </div>
+        
+        <!-- Results Section -->
+         <!--
+        <section class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="results">
+                 <h3>Outcomes</h3>
+                <p>The internal chat feature will be implemented and rolled out to customers.</p>
+                
+               <h3>Key Metrics</h3>
+                <ul>
+                    <li><strong>Efficiency Improvement:</strong> 43% reduction in time spent switching between communication tools</li>
+                    <li><strong>Adoption Rate:</strong> 78% of users actively using the chat feature within the first month</li>
+                    <li><strong>User Satisfaction:</strong> 92% of surveyed users reported that the chat feature improved their workflow</li>
+                    <li><strong>Training Impact:</strong> 35% reduction in onboarding time for new staff members due to better preserved context</li>
+                </ul>
+                
+                <h3>User Feedback</h3>
+                <p>"This has completely transformed how our team collaborates on requests. Having all our communications in one place has saved us countless hours and improved our response quality." - Records Manager, City of Portland</p>
+            </div>
+        </section> -->
+        
+        <!-- Reflection Section -->
+        <section class="project-section">
+            <h2>Reflection</h2>
+            <p>This project fundamentally shifted my perspective on the relationship between design and development. By partnering with AI, I discovered a new way to bridge the gap between creative vision and technical execution, opening up possibilities I hadn't considered before.</p>
+            
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="challenges">Challenges</button>
+                    <button class="tab-button" data-tab="learnings">Learnings</button>
+                    <button class="tab-button" data-tab="next-steps">Next Steps</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="challenges">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Quality Control</h4>
+                                <p>Needed to develop new review processes to ensure AI-generated code met accessibility and performance standards</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Balancing Control and Efficiency</h4>
+                                <p>Learning when to provide specific direction versus when to let Claude make implementation decisions required careful calibration</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="learnings">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>AI as a Design Tool</h4>
+                                <p>Discovered that AI can be an effective design partner when used strategically, not just a coding assistant</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Prompt Engineering as UX Skill</h4>
+                                <p>Realized that clear communication with AI tools is becoming an essential skill for designers working with emerging technologies</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Sustainable Portfolio Strategy</h4>
+                                <p>Created a long-term approach to portfolio maintenance that grows with my career without increasing complexity or costs</p>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane active" id="next-steps">
+                        <div class="tab-grid">
+                            <div class="tab-card">
+                                <h4>Process Optimization</h4>
+                                <p>Experiment with newer AI models to compare code quality and efficiency</p>
+                            </div>
+                            
+                            <div class="tab-card">
+                                <h4>Grow Portfolio</h4>
+                                <p>Continue maintainging and added to my portfolio</p>
+                            </div>
+
+                            <div class="tab-card">
+                                <h4>Continue Learning</h4>
+                                <p>Stay up-to-date with artificial intelligence and continue to learn new skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div> 
+    
+    <!-- Next Project Navigation -->
+    <section class="next-project">
+        <h3>Continue exploring my work</h3>
+        <div class="navigation-buttons">
+            <a href="smart-summary" class="nav-button" aria-label="Previous project">←</a>
+            <a href="index#work" class="nav-button all-projects">ALL PROJECTS</a>
+            <a href="request-forum" class="nav-button" aria-label="Next project">→</a>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/script.js"></script>
+    <!-- Add the password protection script -->
+    <script src="js/password-protection.js"></script>
+    
+</body>
+</html>

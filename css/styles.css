@@ -917,6 +917,21 @@ nav ul li a:hover {
     font-style: italic;
 }
 
+/* Image Caption Link Styles */
+.image-caption a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: var(--transition-default);
+    border-bottom: 1px solid transparent;
+}
+
+.image-caption a:hover {
+    color: #e6d968; /* Slightly darker version of accent color */
+    border-bottom: 1px solid var(--accent-color);
+    text-decoration: none;
+}
+
 /* 9.2 Videos */
 .video-container {
     margin: 30px 0;
@@ -1341,6 +1356,16 @@ body.light-mode .project-section h3,
 body.light-mode .image-caption,
 body.light-mode .video-caption {
     color: #646464;
+}
+
+/* Light Mode - Image Caption Links */
+body.light-mode .image-caption a {
+    color: var(--light-accent-color);
+}
+
+body.light-mode .image-caption a:hover {
+    color: #2a68e5; /* Slightly darker version of light accent color */
+    border-bottom: 1px solid var(--light-accent-color);
 }
 
 body.light-mode .project-header-image img {
