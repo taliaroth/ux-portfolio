@@ -183,28 +183,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn'); // Get the new close button
     
+    function closeMobileMenu() {
+        menuToggle.classList.remove('menu-open');
+        mobileMenuOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    function openMobileMenu() {
+        menuToggle.classList.add('menu-open');
+        mobileMenuOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
     // Toggle mobile menu
     menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('menu-open');
-        mobileMenuOverlay.classList.toggle('open');
-        
-        // Prevent scrolling when menu is open
         if (mobileMenuOverlay.classList.contains('open')) {
-            document.body.style.overflow = 'hidden';
+            closeMobileMenu();
         } else {
-            document.body.style.overflow = '';
+            openMobileMenu();
         }
     });
     
     // Close menu when a link is clicked
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function() {
-            menuToggle.classList.remove('menu-open');
-            mobileMenuOverlay.classList.remove('open');
-            document.body.style.overflow = '';
+            closeMobileMenu();
         });
     });
+
+    // Close menu when the new X button is clicked
+    if (mobileMenuCloseBtn) {
+        mobileMenuCloseBtn.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    }
     
     // Fix for links with hash to work properly with the mobile menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -219,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
-                    }, 300);
+                    }, 300); // Corresponds to menu transition time
                 }
             } else {
                 // Desktop nav links - original behavior
@@ -272,4 +286,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-

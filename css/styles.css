@@ -269,6 +269,22 @@ nav ul li a:hover {
     padding: 10px 20px;
 }
 
+/* Mobile Menu Close Button */
+.mobile-menu-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px; /* Adjusted to align better with hamburger position */
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 36px; /* Larger 'X' for better touch target */
+    font-weight: 300; /* Lighter weight for a more typical 'X' look */
+    cursor: pointer;
+    padding: 10px;
+    line-height: 1; /* Ensures the 'X' is centered in the button area */
+    z-index: 105; /* Ensure it's above other overlay content */
+}
+
 /* 3.4 Theme Toggle */
 .theme-toggle {
     position: relative;
@@ -1270,6 +1286,12 @@ body.light-mode .mobile-nav-link:hover {
     color: var(--light-accent-color);
 }
 
+/* Light Mode - Mobile Menu Close Button */
+body.light-mode .mobile-menu-close-btn {
+    color: var(--light-text-primary);
+}
+
+
 /* Light Mode - Theme Toggle */
 body.light-mode .theme-toggle {
     background-color: #eee;
@@ -1717,4 +1739,3 @@ body.light-mode .connect-cta p {
         display: none;
     }
 }
-
