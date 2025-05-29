@@ -357,10 +357,11 @@ nav ul li a:hover {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    font-size: 12px;
+    font-size: 14px;
     opacity: 0.8;
     font-family: var(--font-primary);
-    font-weight: 300;
+    font-weight: 500;
+    padding: 12px;
 }
 
 /* ==========================================================================
