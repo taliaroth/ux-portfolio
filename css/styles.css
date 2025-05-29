@@ -338,7 +338,6 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 200px;
     font-weight: 900;
-    margin-bottom: 20px;
     color: var(--accent-color);
     line-height: 1;
     font-family: var(--font-headings);
@@ -346,11 +345,12 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-size: 22px;
-    max-width: 650px;
+    font-size: 30px;
+    max-width: 900px;
     margin-bottom: 30px;
     font-family: var(--font-primary);
     font-weight: 300;
+    padding-left: 20px;
 }
 
 .photo-credit {
