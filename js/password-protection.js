@@ -340,9 +340,6 @@ function setupProtectedSections() {
                 const password = passwordInput.value;
                 
                 if (password === PASSWORD) {
-                    if (index === 1) {
-                        unlockSection(wrapper);
-                    }
                     unlockAllContent();
                     saveAuthentication();
                     removePasswordUI();
@@ -370,16 +367,22 @@ function setupProtectedSections() {
 }
 
 function unlockSection(wrapper) {
+    if (!wrapper) return;
+
     const blurredContent = wrapper.querySelector('.blurred-content');
     const overlay = wrapper.querySelector('.password-overlay');
-    
-    blurredContent.classList.remove('blurred-content');
-    blurredContent.classList.add('unblurred-content');
-    
-    overlay.style.opacity = '0';
-    setTimeout(() => {
-        overlay.style.display = 'none';
-    }, 500);
+
+    if (blurredContent) {
+        blurredContent.classList.remove('blurred-content');
+        blurredContent.classList.add('unblurred-content');
+    }
+
+    if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 500);
+    }
 }
 
 function unlockAllContent() {
